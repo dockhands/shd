@@ -99,6 +99,11 @@
 
 		var img = new Image();
     		img.setAttribute('crossOrigin','anonymous');
+		var imageIcon= new Image();
+			imageIcon.src = "img/eap.png";
+			imageIcon.height= 20;
+			imageIcon.width= 20;
+
 		img.onload = function() {
 			canvas.width = width;
 			canvas.height = height;
@@ -117,6 +122,10 @@
 			canvas.id = 'myCanvas';
 			$('.canvas').html(canvas);
 			
+			
+			//ctx.drawImage(imageIcon, 10, _h - 100);
+			ctx.drawImage(imageIcon,30, _h-50, 40, 40);
+
 		};
 
 		if(memes[image]) var url = memes[image];
@@ -125,6 +134,7 @@
 		img.src = url; //"http://www.corsproxy.com/" + url.replace(/https?:\/\//, "");
 	};
 
+ 			
 
 })(console);
 
